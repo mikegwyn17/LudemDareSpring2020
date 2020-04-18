@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller;
     public float moveSpeed = 40f;
     float _horizontalMove = 0f;
+    bool _isJumping = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,10 +20,15 @@ public class PlayerMovement : MonoBehaviour
     {
         // get values for movement in update but don't aplly them
         _horizontalMove = Input.GetAxisRaw("Horizontal") * moveSpeed;
+
+        if (Input.GetButton("Jump"))
+        {
+            _isJumping = true;
+        }
     }
 
     private void FixedUpdate()
     {
-        controller.Move(_horizontalMove * Time.fixedDeltaTime, false, false);
+        controller.Move(_horizontalMove * Time.fixedDeltaTime, false, _isJumping);
     }
 }
