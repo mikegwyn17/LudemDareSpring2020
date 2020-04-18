@@ -1,0 +1,497 @@
+fileFormatVersion: 2
+guid: f73f0b288c4724c41b1a7628a2fa43c2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2836776924411919329
+    second: priest-NESW_0
+  - first:
+      213: 8868378825641341715
+    second: priest-NESW_1
+  - first:
+      213: -8232875024389505989
+    second: priest-NESW_2
+  - first:
+      213: 2685414235292343720
+    second: priest-NESW_3
+  - first:
+      213: 6282386060129510262
+    second: priest-NESW_4
+  - first:
+      213: 3007490266687310359
+    second: priest-NESW_5
+  - first:
+      213: -6783025029018627759
+    second: priest-NESW_6
+  - first:
+      213: 2211463094398948140
+    second: priest-NESW_7
+  - first:
+      213: 5097817533545839789
+    second: priest-NESW_8
+  - first:
+      213: -138164009822807505
+    second: priest-NESW_9
+  - first:
+      213: 8855117090297483939
+    second: priest-NESW_10
+  - first:
+      213: -8871461525202427198
+    second: priest-NESW_11
+  - first:
+      213: -7229036547770986977
+    second: priest-NESW_12
+  - first:
+      213: -7250921977071220326
+    second: priest-NESW_13
+  - first:
+      213: 8906821241133340952
+    second: priest-NESW_14
+  - first:
+      213: 8977341887825249095
+    second: priest-NESW_15
+  - first:
+      213: -6898044991815408367
+    second: priest-NESW_16
+  - first:
+      213: 5537694718910076399
+    second: priest-NESW_17
+  - first:
+      213: -2173575562474190064
+    second: priest-NESW_18
+  - first:
+      213: -2484756164232205463
+    second: priest-NESW_19
+  - first:
+      213: -1576401977712114253
+    second: priest-NESW_20
+  - first:
+      213: 687300262874416931
+    second: priest-NESW_21
+  - first:
+      213: -5740396320450364002
+    second: priest-NESW_22
+  - first:
+      213: 1718069976366525398
+    second: priest-NESW_23
+  - first:
+      213: 3150067097522941090
+    second: priest-NESW_24
+  - first:
+      213: -1561043952165847466
+    second: priest-NESW_25
+  - first:
+      213: 8326808668538601586
+    second: priest-NESW_26
+  - first:
+      213: 3471702682210014848
+    second: priest-NESW_27
+  - first:
+      213: 8678941221028708508
+    second: priest-NESW_28
+  - first:
+      213: 4877751125491734138
+    second: priest-NESW_29
+  - first:
+      213: -6295276484398065371
+    second: priest-NESW_30
+  - first:
+      213: -1286553514271047450
+    second: priest-NESW_0
+  - first:
+      213: 307607344642769120
+    second: priest-NESW_1
+  - first:
+      213: -4015158208721150633
+    second: priest-NESW_2
+  - first:
+      213: -1003169742165077878
+    second: priest-NESW_3
+  - first:
+      213: 3019836716890443191
+    second: priest-NESW_4
+  - first:
+      213: -1350822671372149980
+    second: priest-NESW_5
+  - first:
+      213: -7465681450789352659
+    second: priest-NESW_6
+  - first:
+      213: -3169811069420290692
+    second: priest-NESW_7
+  - first:
+      213: -431516853642328919
+    second: priest-NESW_8
+  - first:
+      213: -1854039720747323129
+    second: priest-NESW_9
+  - first:
+      213: 3902730501354137128
+    second: priest-NESW_10
+  - first:
+      213: -2463217727876107280
+    second: priest-NESW_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: priest-NESW_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0085d256e352ee0800000000000000
+      internalID: -1286553514271047450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: priest-NESW_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e0cbbb0047d44400800000000000000
+      internalID: 307607344642769120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: priest-NESW_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d9e24e1ea4748c0800000000000000
+      internalID: -4015158208721150633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: priest-NESW_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8094dc3f660412f0800000000000000
+      internalID: -1003169742165077878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: priest-NESW_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bdcfe58e7d98e920800000000000000
+      internalID: 3019836716890443191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: priest-NESW_5
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b9156ffe9e04de0800000000000000
+      internalID: -1350822671372149980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: priest-NESW_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b4a7f7642946890800000000000000
+      internalID: -7465681450789352659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: priest-NESW_7
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 64
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d3a1270a19204d0800000000000000
+      internalID: -3169811069420290692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: priest-NESW_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a40e0835b1f20af0800000000000000
+      internalID: -431516853642328919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: priest-NESW_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701346572b02546e0800000000000000
+      internalID: -1854039720747323129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: priest-NESW_10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826ab43a6b8492630800000000000000
+      internalID: 3902730501354137128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: priest-NESW_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f3ff75f684e0ddd0800000000000000
+      internalID: -2463217727876107280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
