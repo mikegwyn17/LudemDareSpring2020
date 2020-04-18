@@ -472,6 +472,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4415387019030818227, guid: 107584e459a07ba47ba493571a1502eb,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4415387019030818237, guid: 107584e459a07ba47ba493571a1502eb,
         type: 3}
       propertyPath: m_RootOrder
@@ -940,6 +945,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907544993551804319, guid: 84f59128614193540a3650d508b0c4f6,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84f59128614193540a3650d508b0c4f6, type: 3}
