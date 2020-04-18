@@ -30,5 +30,6 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         controller.Move(_horizontalMove * Time.fixedDeltaTime, false, _isJumping);
+        _isJumping = false;
     }
 }
