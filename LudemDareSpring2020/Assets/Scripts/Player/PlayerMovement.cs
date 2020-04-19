@@ -16,6 +16,12 @@ namespace LD
         private Vector3 spitTargetPosition;
         private Vector3 dirToTarget;
         private float spitTravelSpeed = 20f;
+        private Rigidbody2D m_Rigidbody2D;
+
+        private void Awake()
+        {
+            m_Rigidbody2D = GetComponent<Rigidbody2D>();
+        }
 
         // Start is called before the first frame update
         void Start()
@@ -30,7 +36,6 @@ namespace LD
             {
                 case State.Normal:
                     CheckForJumping();
-                    CheckForSpitSwingStart();
                     break;
                 case State.Jumping:
                     break;
@@ -69,7 +74,7 @@ namespace LD
             controller.Move(_horizontalMove * Time.fixedDeltaTime, false, _isJumping);
             _isJumping = false;
 
-            if(playerState != State.SpitSwinging)
+            if(playerState != State.SpitSwinging && playerState != State.SpitSwingTravel)
             {
                 playerState = State.Normal;
             }
@@ -90,21 +95,31 @@ namespace LD
         {
             if (playerState != State.SpitSwinging && playerState != State.SpitSwingTravel && Input.GetMouseButtonDown(0))
             {
-                SpitSwing ss = new SpitSwing();
+                //SpitSwing ss = new SpitSwing();
                 spitTargetPosition = GetMouseWorldPosition();
                 dirToTarget = (spitTargetPosition - GetPosition()).normalized;
-                spitTravelSpeed = 20f;
+                spitTravelSpeed = 150f;
                 playerState = State.SpitSwinging;
+
+                GetComponent<Rigidbody2D>().AddForce(dirToTarget * spitTravelSpeed, ForceMode2D.Impulse);
             }
 
         }
 
         private void HandleSpitSwinging()
         {
-            transform.position += dirToTarget * Time.deltaTime * spitTravelSpeed;
-            if (Vector3.Distance(GetPosition(), spitTargetPosition) < 2f)
+            //transform.position += dirToTarget * Time.deltaTime * spitTravelSpeed;
+
+            //if (Vector3.Distance(GetPosition(), spitTargetPosition) < 0.5f)
+            //{
+            //    //playerState = State.SpitSwingTravel;
+            //    playerState = State.Normal;
+            //}
+
+            if (GetPosition().y >= spitTargetPosition.y)
             {
-                playerState = State.SpitSwingTravel;
+                //playerState = State.SpitSwingTravel;
+                playerState = State.Normal;
             }
         }
 
@@ -134,7 +149,10 @@ namespace LD
 
         public Vector3 GetPosition()
         {
-            return transform.position;
+            //return transform.position;
+
+            var camelHeadPos = transform.Find("camelHead");
+            return camelHeadPos.position;
         }
     }
 }
