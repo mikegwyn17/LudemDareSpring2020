@@ -3,87 +3,120 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-public class EnemyAI : MonoBehaviour
+namespace Ld
 {
-    public Transform target;
-
-    public float speed = 200f;
-
-    public float nextWaypointDistance = 3f;
-
-    Path path;
-    int currentWaypoint = 0;
-    bool reachedEndOfPath = false;
-
-    Seeker seeker;
-    Rigidbody2D rb;
-    public Transform gfx;
-
-    // Start is called before the first frame update
-    void Start()
+    public class EnemyAI : MonoBehaviour
     {
-        seeker = GetComponent <Seeker>();
-        rb = GetComponent<Rigidbody2D>();
+        public Transform target;
 
-        // invoke this to update the path when the player is moving
-        InvokeRepeating("UpdatePath", 0f, .5f);
-    }
+        public float speed = 200f;
 
-    void OnPathComplete (Path p)
-    {
-        if (!p.error)
+        public float nextWaypointDistance = 3f;
+
+        Path path;
+        int currentWaypoint = 0;
+        bool reachedEndOfPath = false;
+
+        Seeker seeker;
+        Rigidbody2D rb;
+        public Transform gfx;
+
+        // used detect if the enemy if block and can no longer move
+        bool _isMoving = true;
+
+        Vector3 _previousPosition = new Vector3();
+
+        // Start is called before the first frame update
+        void Start()
         {
-            path = p;
-            currentWaypoint = 0;
-        }
-    }
+            seeker = GetComponent<Seeker>();
+            rb = GetComponent<Rigidbody2D>();
 
-    private void UpdatePath()
-    {
-        if (seeker.IsDone())
-        {
-            seeker.StartPath(rb.position, target.position, OnPathComplete);
-        }
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        if (path == null)
-            return;
-
-        if (currentWaypoint >= path.vectorPath.Count)
-        {
-            reachedEndOfPath = true;
-            return;
+            // invoke this to update the path when the player is moving
+            InvokeRepeating("UpdatePath", 0f, .5f);
         }
 
-        else
+        void OnPathComplete(Path p)
         {
-            reachedEndOfPath = false;
+            if (!p.error)
+            {
+                path = p;
+                currentWaypoint = 0;
+            }
         }
 
-        // move sprite to next waypoint
-        var direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        var force = direction * speed * Time.deltaTime;
-
-        rb.AddForce(force);
-
-        var distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
-        if (distance < nextWaypointDistance) {
-            currentWaypoint++;
+        private void UpdatePath()
+        {
+            if (seeker.IsDone())
+            {
+                seeker.StartPath(rb.position, target.position, OnPathComplete);
+            }
         }
 
-        // based on direction of bird flip the transform
-        // traveling to the right
-        if (force.x >= 0.01f)
+        private void Update()
         {
-            gfx.localScale = new Vector3(-1f, 1f, 1f);
+            _isMoving = Vector3.Distance(rb.transform.position, _previousPosition) >= .0001f;
         }
-        // traveling to the left
-        else if (force.x <= -0.01f)
+
+        // Update is called once per frame
+        void FixedUpdate()
         {
-            gfx.localScale = new Vector3(1f, 1f, 1f);
+            Vector2 force = new Vector2();
+
+            if (path == null)
+                return;
+
+            if (currentWaypoint >= path.vectorPath.Count)
+            {
+                reachedEndOfPath = true;
+                return;
+            }
+
+            else
+            {
+                reachedEndOfPath = false;
+            }
+
+            // move sprite to next waypoint
+            var direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+
+            // enemy doesn't seem to be moving
+            if (!_isMoving)
+            {
+                Debug.Log("are we getting here");
+                force = new Vector2(0f, 100f) * speed * Time.fixedDeltaTime;
+            }
+            else 
+            { 
+                force = direction * speed * Time.fixedDeltaTime; 
+            }
+
+            // set previous position before applying force
+            _previousPosition = rb.transform.position;
+
+
+            rb.AddForce(force);
+
+            var distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+
+            // figure out how to determine if you hit a an obstacle that can be jumped over
+
+            if (distance < nextWaypointDistance)
+            {
+                currentWaypoint++;
+            }
+
+            // based on direction of bird flip the transform
+            // traveling to the right
+            if (force.x >= 0.01f)
+            {
+                gfx.localScale = new Vector3(-1f, 1f, 1f);
+            }
+            // traveling to the left
+            else if (force.x <= -0.01f)
+            {
+                gfx.localScale = new Vector3(1f, 1f, 1f);
+            }
         }
     }
 }

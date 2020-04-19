@@ -11,6 +11,7 @@ namespace LD
     public static class Constants
     {
         public const string GROUND_TAG = "Ground";
+        public const int OBSTACLE_LAYER = 8;
     }
 
     public enum State

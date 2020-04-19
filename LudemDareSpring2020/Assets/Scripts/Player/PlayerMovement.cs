@@ -36,6 +36,7 @@ namespace LD
             {
                 case State.Normal:
                     CheckForJumping();
+                    CheckForSpitSwingStart();
                     break;
                 case State.Jumping:
                     break;
@@ -49,8 +50,6 @@ namespace LD
 
             // get values for movement in update but don't apply them
             _horizontalMove = Input.GetAxisRaw("Horizontal") * moveSpeed;
-
-            
         }
 
         private void FixedUpdate()
@@ -149,10 +148,10 @@ namespace LD
 
         public Vector3 GetPosition()
         {
-            //return transform.position;
+            return transform.position;
 
-            var camelHeadPos = transform.Find("camelHead");
-            return camelHeadPos.position;
+            //var camelHeadPos = transform.Find("camelHead");
+            //return camelHeadPos.position;
         }
     }
 }
