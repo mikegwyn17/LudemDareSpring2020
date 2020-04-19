@@ -12,4 +12,15 @@ namespace LD
     {
         public const string GROUND_TAG = "Ground";
     }
+
+    public enum State
+    {
+        Normal,
+        Attacking,
+        Jumping,
+        SpitSwingStart,
+        SpitSwinging,
+        SpitSwingTravel,
+    }
+
 }
