@@ -12,6 +12,7 @@ namespace LD
     {
         public const string GROUND_TAG = "Ground";
         public const int OBSTACLE_LAYER = 8;
+        public const string PLAYER_TAG = "Player";
     }
 
     public enum State

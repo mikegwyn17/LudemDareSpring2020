@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-namespace Ld
+namespace LD
 {
     public class EnemyAI : MonoBehaviour
     {
@@ -16,6 +16,7 @@ namespace Ld
         Path path;
         int currentWaypoint = 0;
         bool reachedEndOfPath = false;
+        bool _hasColidedWithPlayer = false;
 
         Seeker seeker;
         Rigidbody2D rb;
@@ -58,6 +59,24 @@ namespace Ld
             _isMoving = Vector3.Distance(rb.transform.position, _previousPosition) >= .0001f;
         }
 
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            // enemy has collided with player
+            if (collision.collider.CompareTag(Constants.PLAYER_TAG))
+            {
+                _hasColidedWithPlayer = true;
+            }
+        }
+
+        private void OnCollisionExit2D(Collision2D collision)
+        {
+            // enemy and player are no longer colliding
+            if (collision.collider.CompareTag(Constants.PLAYER_TAG))
+            {
+                _hasColidedWithPlayer = false;
+            }
+        }
+
         // Update is called once per frame
         void FixedUpdate()
         {
@@ -80,10 +99,9 @@ namespace Ld
             // move sprite to next waypoint
             var direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
 
-            // enemy doesn't seem to be moving
-            if (!_isMoving)
+            // enemy doesn't seem to be moving and is not stuck on the player
+            if (!_isMoving && !_hasColidedWithPlayer)
             {
-                Debug.Log("are we getting here");
                 force = new Vector2(0f, 100f) * speed * Time.fixedDeltaTime;
             }
             else 
